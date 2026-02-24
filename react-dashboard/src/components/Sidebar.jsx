@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
     <div
       className={`fixed md:static top-0 left-0 h-full w-56 bg-slate-900 text-white p-6 transform ${
@@ -12,25 +12,25 @@ const Sidebar = ({ isOpen }) => {
       <ul className="space-y-3 text-sm">
 
         <li>
-          <NavLink to="/" className="block hover:text-indigo-400">
+          <NavLink to="/" onClick={() => setIsOpen(false)} className="block hover:text-indigo-400">
             Dashboard
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/users" className="block hover:text-indigo-400">
+          <NavLink to="/users" onClick={() => setIsOpen(false)} className="block hover:text-indigo-400">
             Users
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/orders" className="block hover:text-indigo-400">
+          <NavLink to="/orders" onClick={() => setIsOpen(false)} className="block hover:text-indigo-400">
             Orders
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/settings" className="block hover:text-indigo-400">
+          <NavLink to="/settings" onClick={() => setIsOpen(false)} className="block hover:text-indigo-400">
             Settings
           </NavLink>
         </li>

@@ -15,7 +15,7 @@ const MainLayout = () => {
     <div className="flex min-h-screen">
 
       {/* Sidebar */}
-      <Sidebar isOpen={isOpen} />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       {/* Main Content */}
       <div className="flex-1 bg-slate-100 flex flex-col">
