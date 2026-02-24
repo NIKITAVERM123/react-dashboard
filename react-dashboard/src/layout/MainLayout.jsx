@@ -17,8 +17,7 @@ const MainLayout = () => {
       {/* Sidebar */}
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      {/* Main Content */}
-      <div className="flex-1 bg-slate-100 flex flex-col">
+     <div className="flex-1 bg-slate-100 flex flex-col md:ml-56">
 
         {/* Header */}
         <Header toggleSidebar={toggleSidebar} />
