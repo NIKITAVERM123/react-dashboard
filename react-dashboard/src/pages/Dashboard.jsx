@@ -22,10 +22,14 @@ const Dashboard = () => {
       </div>
 
       {/* 📊 CHART */}
-      <div className="mt-10 bg-white dark:bg-slate-800 p-6 rounded-xl shadow">
+      <div className="mt-10 bg-white dark:bg-slate-800 p-6 rounded-xl shadow focus:outline-none">
         <h2 className="mb-4 font-semibold">Users Analytics</h2>
 
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer
+          width="100%"
+          height={300}
+          className="focus:outline-none"
+        >
           <BarChart data={data}>
             <XAxis dataKey="name" stroke="#8884d8" />
             <YAxis />
