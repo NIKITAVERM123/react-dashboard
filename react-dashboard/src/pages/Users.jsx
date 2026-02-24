@@ -56,31 +56,47 @@ const Users = () => {
           ))}
         </div>
       ) : (
-        <div className="bg-white dark:bg-slate-800 p-4 md:p-6 rounded-xl shadow overflow-x-auto">
+        <div className="bg-white dark:bg-slate-800 p-4 md:p-6 rounded-xl shadow">
 
-          {/* 📊 TABLE */}
-          <table className="min-w-[500px] w-full text-sm text-left">
-            <thead className="border-b text-slate-500 dark:text-slate-300">
-              <tr>
-                <th className="pb-3">Name</th>
-                <th className="pb-3">Email</th>
-                <th className="pb-3">Company</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {currentUsers.map((user) => (
-                <tr key={user.id} className="border-b">
-                  <td className="py-3">{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.company.name}</td>
+          {/* 💻 DESKTOP TABLE */}
+          <div className="hidden md:block">
+            <table className="w-full text-sm text-left">
+              <thead className="border-b text-slate-500 dark:text-slate-300">
+                <tr>
+                  <th className="pb-3">Name</th>
+                  <th className="pb-3">Email</th>
+                  <th className="pb-3">Company</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                {currentUsers.map((user) => (
+                  <tr key={user.id} className="border-b">
+                    <td className="py-3">{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.company.name}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* 📱 MOBILE CARD VIEW */}
+          <div className="space-y-4 md:hidden">
+            {currentUsers.map((user) => (
+              <div
+                key={user.id}
+                className="border rounded-lg p-3 dark:border-slate-700"
+              >
+                <p className="font-semibold">{user.name}</p>
+                <p className="text-sm text-slate-500">{user.email}</p>
+                <p className="text-sm">{user.company.name}</p>
+              </div>
+            ))}
+          </div>
 
           {/* 🔢 PAGINATION */}
-          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+          <div className="flex justify-between mt-4">
 
             <button
               onClick={() => setCurrentPage(currentPage - 1)}
