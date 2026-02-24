@@ -90,7 +90,7 @@ const Settings = () => {
           />
         </div>
 
-        {/* Name */}
+      
         <div>
           <label className="block text-sm font-medium mb-1">Name</label>
           <input
@@ -104,7 +104,7 @@ const Settings = () => {
           )}
         </div>
 
-        {/* Email */}
+      
         <div>
           <label className="block text-sm font-medium mb-1">Email</label>
           <input
@@ -118,7 +118,7 @@ const Settings = () => {
           )}
         </div>
 
-        {/* Password */}
+       
         <div className="relative">
           <label className="block text-sm font-medium mb-1">Password</label>
 

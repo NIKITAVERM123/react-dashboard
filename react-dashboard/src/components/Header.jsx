@@ -4,7 +4,7 @@ import { ThemeContext } from "../context/ThemeContext";
 const Header = ({ toggleSidebar }) => {
   const { dark, setDark } = useContext(ThemeContext);
 
-  // ✅ Get logged user name from localStorage
+  
   const userName = localStorage.getItem("loggedUser");
 
   const handleLogout = () => {
@@ -17,7 +17,7 @@ const Header = ({ toggleSidebar }) => {
   return (
     <div className="bg-white dark:bg-slate-800 shadow-sm px-6 py-4 flex justify-between items-center">
 
-      {/* LEFT SECTION */}
+     
       <div className="flex items-center gap-3">
         <button
           onClick={toggleSidebar}
@@ -31,14 +31,14 @@ const Header = ({ toggleSidebar }) => {
         </h2>
       </div>
 
-      {/* RIGHT SECTION */}
+    
       <div className="flex items-center gap-4">
 
         <span className="text-sm text-slate-500 hidden md:block dark:text-slate-300">
           Admin Dashboard
         </span>
 
-        {/* Theme Toggle */}
+        
         <button
           onClick={() => setDark(!dark)}
           className="bg-slate-200 dark:bg-slate-700 px-3 py-1 rounded text-sm"
@@ -46,7 +46,7 @@ const Header = ({ toggleSidebar }) => {
           {dark ? "Light" : "Dark"}
         </button>
 
-        {/* Logout Button */}
+        
         <button
           onClick={handleLogout}
           className="bg-red-500 hover:bg-red-600 text-white px-4 py-1.5 rounded text-sm"

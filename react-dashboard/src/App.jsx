@@ -19,11 +19,11 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          {/* PUBLIC */}
+       
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          {/* PRIVATE */}
+       
           <Route
             path="/"
             element={

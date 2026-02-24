@@ -21,12 +21,11 @@ const Orders = () => {
   return (
     <div className="p-4 md:p-6">
 
-      {/* PAGE TITLE */}
       <h1 className="text-2xl font-semibold mb-6 text-slate-800 dark:text-white">
         Orders
       </h1>
 
-      {/* SEARCH + FILTER */}
+      
       <div className="flex flex-col md:flex-row gap-3 mb-5">
         <input
           type="text"
@@ -46,7 +45,7 @@ const Orders = () => {
         </select>
       </div>
 
-      {/* TABLE */}
+     
       <div className="bg-white dark:bg-slate-800 p-4 md:p-6 rounded-xl shadow overflow-x-auto">
 
         <table className="w-full text-sm text-left">

@@ -35,7 +35,7 @@ const Users = () => {
     <div>
       <h1 className="text-2xl font-semibold mb-6">Users</h1>
 
-      {/* 🔍 SEARCH */}
+     
       <input
         type="text"
         placeholder="Search user..."
@@ -58,7 +58,7 @@ const Users = () => {
       ) : (
         <div className="bg-white dark:bg-slate-800 p-4 md:p-6 rounded-xl shadow">
 
-          {/* 💻 DESKTOP TABLE */}
+        
           <div className="hidden md:block">
             <table className="w-full text-sm text-left">
               <thead className="border-b text-slate-500 dark:text-slate-300">
@@ -81,7 +81,7 @@ const Users = () => {
             </table>
           </div>
 
-          {/* 📱 MOBILE CARD VIEW */}
+        
           <div className="space-y-4 md:hidden">
             {currentUsers.map((user) => (
               <div
@@ -95,7 +95,7 @@ const Users = () => {
             ))}
           </div>
 
-          {/* 🔢 PAGINATION */}
+         
           <div className="flex justify-between mt-4">
 
             <button

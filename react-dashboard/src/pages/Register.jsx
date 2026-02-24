@@ -16,21 +16,21 @@ const Register = () => {
   const validate = () => {
     let newErrors = {};
 
-    // Name validation
+   
     if (!name) {
       newErrors.name = "Name is required";
     } else if (/\d/.test(name)) {
       newErrors.name = "Name cannot contain numbers";
     }
 
-    // Email validation
+    
     if (!email) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Enter valid email";
     }
 
-    // Password validation
+
     if (!password) {
       newErrors.password = "Password is required";
     } else if (password.length < 6) {
@@ -65,7 +65,7 @@ const Register = () => {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    // Auto login
+  
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("loggedUser", name);
     localStorage.setItem("loggedUserEmail", email);
@@ -82,7 +82,7 @@ const Register = () => {
       >
         <h2 className="text-xl font-bold text-center">Sign Up</h2>
 
-        {/* Name */}
+      
         <div>
           <input
             type="text"
@@ -95,7 +95,7 @@ const Register = () => {
           )}
         </div>
 
-        {/* Email */}
+       
         <div>
           <input
             type="text"
@@ -108,7 +108,7 @@ const Register = () => {
           )}
         </div>
 
-        {/* Password */}
+       
         <div className="relative">
           <input
             type={show ? "text" : "password"}

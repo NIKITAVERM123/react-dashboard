@@ -21,7 +21,7 @@ const Dashboard = () => {
         <StatCard title="Orders" value="320" />
       </div>
 
-      {/* 📊 CHART */}
+    
       <div className="mt-10 bg-white dark:bg-slate-800 p-6 rounded-xl shadow focus:outline-none">
         <h2 className="mb-4 font-semibold">Users Analytics</h2>
 

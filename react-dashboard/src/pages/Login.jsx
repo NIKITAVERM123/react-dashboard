@@ -15,14 +15,13 @@ const Login = () => {
   const validate = () => {
     let newErrors = {};
 
-    // Email validation
+    
     if (!email) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Enter valid email";
     }
 
-    // Password validation
     if (!password) {
       newErrors.password = "Password is required";
     }
@@ -68,7 +67,7 @@ const Login = () => {
       >
         <h2 className="text-xl font-bold text-center">Login</h2>
 
-        {/* Email */}
+     
         <div>
           <input
             type="text"
@@ -81,7 +80,7 @@ const Login = () => {
           )}
         </div>
 
-        {/* Password */}
+     
         <div className="relative">
           <input
             type={show ? "text" : "password"}
