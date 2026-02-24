@@ -6,11 +6,11 @@ const Users = () => {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
 
-  // pagination state
+
   const [currentPage, setCurrentPage] = useState(1);
   const usersPerPage = 5;
 
-  // API CALL
+
 useEffect(() => {
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
@@ -21,12 +21,12 @@ useEffect(() => {
     });
 }, []);
 
-  // SEARCH FILTER
+
   const filteredUsers = users.filter((user) =>
     user.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // PAGINATION LOGIC
+
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
 
@@ -39,18 +39,18 @@ useEffect(() => {
     <div>
       <h1 className="text-2xl font-semibold mb-6">Users</h1>
 
-      {/* 🔍 SEARCH */}
+    
       <input
         type="text"
         placeholder="Search user..."
         className="mb-4 p-2 border rounded w-full dark:bg-slate-700"
         onChange={(e) => {
           setSearch(e.target.value);
-          setCurrentPage(1); // reset page on search
+          setCurrentPage(1);
         }}
       />
 
-      {/* ⏳ LOADING */}
+
       {loading ? (
        <div className="space-y-3">
   {[1,2,3,4,5].map((i) => (
@@ -63,7 +63,7 @@ useEffect(() => {
       ) : (
         <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow">
 
-          {/* 📊 TABLE */}
+        
           <table className="w-full text-sm text-left">
             <thead className="border-b text-slate-500 dark:text-slate-300">
               <tr>
@@ -84,7 +84,7 @@ useEffect(() => {
             </tbody>
           </table>
 
-          {/* 📄 PAGINATION */}
+
           <div className="flex gap-3 mt-4">
 
             <button
