@@ -12,17 +12,26 @@ const MainLayout = () => {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen relative">
 
       {/* Sidebar */}
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-     <div className="flex-1 bg-slate-100 flex flex-col md:ml-56">
+      {/* 🔲 Overlay (mobile only) */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40 md:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* Main Content */}
+      <div className="flex-1 bg-slate-100 flex flex-col">
 
         {/* Header */}
         <Header toggleSidebar={toggleSidebar} />
 
-        {/* Dynamic Page Content */}
+        {/* Page Content */}
         <div className="p-8 flex-1">
           <Outlet />
         </div>
